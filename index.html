@@ -5,41 +5,67 @@
 		<title>业务主页面</title>
 		<link rel="stylesheet" href="css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link href="css/mui.min.css" rel="stylesheet" type="text/css"/>
+		<link href="css/icons-extra.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
 		<div class="showContent">
-			<div class="imgList">
-				<img src="img/index/bg3.jpg" alt="" style="width:100%;"/>
-			</div>
+			<div id="slider" class="mui-slider" >
+		          <div class="mui-slider-group mui-slider-loop">
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><img class="my-slider-img" src="img/1.jpg" /></div>
+				    <div class="mui-slider-item"><img class="my-slider-img" src="img/2.jpg" /></div>
+				    <div class="mui-slider-item"><img class="my-slider-img" src="img/3.jpg" /></div>
+				    <div class="mui-slider-item"><img class="my-slider-img" src="img/1.jpg" /></div>
+				    <div class="mui-slider-item"><img class="my-slider-img" src="img/3.jpg" /></div>
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><img class="my-slider-img" src="img/2.jpg" /></div>
+				  </div>
+		          <div class="mui-slider-indicator">
+		            <div class="mui-indicator mui-active"></div>
+		            <div class="mui-indicator"></div>
+		            <div class="mui-indicator"></div>
+		            <div class="mui-indicator"></div>
+		          </div>
+		        </div>
 			<div class="showIcon">
-				<div class="icon">
+				<div class="icon" id="user">
 					<div class="iconImg"><img src="img/icon/addressbook.png" alt="用户信息" /></div>
 					<div class="iconTitle">用户</div>
 				</div>
-				<div class="icon">
+				<div class="icon" id="mess">
 					<div class="iconImg"><img src="img/icon/message.png" alt="消息" />
 					<span class="iconNum">5</span>
 					</div>
 					<div class="iconTitle">消息</div>
 				</div>
-				<div class="icon">
+				<div class="icon" id="money">
 					<div class="iconImg"><img src="img/icon/financial_fill.png" alt="缴费" /></div>
 					<div class="iconTitle">交费</div>
 				</div>
-				<div class="icon">
-					<div class="iconImg"><img src="img/icon/addressbook.png" alt="用户信息" /></div>
-					<div class="iconTitle">用户</div>
-				</div>
-				<div class="icon">
-					<div class="iconImg"><img src="img/icon/message.png" alt="消息" /></div>
-					<div class="iconTitle">消息</div>
-				</div>
-				<div class="icon">
-					<div class="iconImg"><img src="img/icon/financial_fill.png" alt="缴费" /></div>
-					<div class="iconTitle">交费</div>
+				<div class="icon" id="car">
+					<div class="iconImg"><img src="img/icon/financial_fill.png" alt="拼车" /></div>
+					<div class="iconTitle">拼车</div>
 				</div>
 			</div>
 		</div>
 		<script src="js/public.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+			document.getElementById('user').addEventListener('click',function(){
+				window.location.href='user.html';
+			});
+			document.getElementById('mess').addEventListener('click',function(){
+				window.location.href='merchantList.html';
+			});
+			document.getElementById('money').addEventListener('click',function(){
+				window.location.href='pay.html';
+			});
+			document.getElementById('car').addEventListener('click',function(){
+				window.location.href='pay.html';
+			});
+			}
+		</script>
 	</body>
 </html>

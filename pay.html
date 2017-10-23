@@ -3,7 +3,35 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>交费</title>
+		<link rel="stylesheet" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user.css"/>
 	</head>
 	<body>
+		<header class="Title">
+			<a href="javascript;;" class="headIcon"><img src="img/icon/return.png"/></a>
+			<p class="headTitle">用户缴费</p>
+		</header>
+		<div class="detailInfo">
+			<div class="info">
+				<div class="infoImg"><img src="img/user/eg1.jpg" alt="用户头像"/></div>
+				<div class="infoMes userMin">
+					<p><span class="infoMesLi">昵称:</span><span class="infoMesInfo">yiyi</span></p>
+					<p><span class="infoMesLi">电话:</span><span class="infoMesInfo">13123233434</span></p>
+					<p><span class="infoMesLi">已交费:</span><span class="infoMesInfo">13.4</span></p>
+					<p><span class="infoMesLi">欠交费:</span><span class="infoMesInfo">100</span></p>
+					<p><span class="infoMesLi">累计交费:</span><span class="infoMesInfo">131.2</span></p>
+				</div>
+				<div class="payText">
+					<input type="text" placeholder="请输入要缴费的金额" />
+					<button class="btn btn-border btn-round color-1 material-design" data-color="#426FC5">缴费</button>
+				</div>
+			</div>
+			<div class="info carImg">
+				<p>车辆信息</p>
+				<img src="img/user/car.jpg" alt="车辆照片"/>
+			</div>
+		</div>
+		<script src="js/public.js"></script>
 	</body>
 </html>

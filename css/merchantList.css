@@ -1,0 +1,30 @@
+*{font:normal 12px "微软雅黑";color:#000000;}
+ul{list-style-type: none;}
+a{text-decoration: none;}
+#tab-list{width: 90%;padding-top:80px;margin: 0 5%;}
+#ul1{height: 32px;}
+#ul1 li{display: inline-block;width: 48.2%;font-size: 1.2rem;
+line-height: 30px;border-radius:15px;text-align: center;border: 1px solid #999;}
+#ul1 li:hover{cursor: pointer;}
+#ul1 li.active{background: -webkit-linear-gradient(left,#fa8078,#f7373d) no-repeat;color: #EEEEEE;}
+#tab-list div{border: 1px solid #7396B8;margin-top:10px;border-radius:15px;}
+#tab-list div li{height: 30px;line-height: 30px;border-bottom: 1px dotted #242424;
+text-indent: 8px;text-align: center;padding-bottom: 10px;}
+#tab-list div li:last-child{border: none;}
+#tab-list div li a{margin:0 5%;font-size:25px}
+#tab-list div li a:focus{text-decoration: none;}
+.showMain .strong{font-size: 1.2rem;}
+.show{display: block;}
+.hide{display: none;}
+ 
+@media only screen and (max-width: 370px){
+/*#ul1{width:340px;}*/
+/*#tab-list div{width: 340px;overflow: hidden;}*/
+#tab-list div li{height: 30px;line-height: 30px;text-indent: 8px;height: 70px;}
+#tab-list div li a{margin:0;}
+#tab-list div li a span{display: inline-block}
+}
+
+@media only screen and (max-width:197px){
+#tab-list div li{height: 110px;}	
+}

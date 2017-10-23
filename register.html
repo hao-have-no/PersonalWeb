@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">注册新用户</h1>
+		</header>
+		<div class="mui-content">
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label>账号</label>
+					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入你的手机号">
+				</div>
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input id='passwordOne' type="password" class="mui-input-clear mui-input" placeholder="请输入6-12位密码">
+				</div>
+				<div class="mui-input-row">
+					<label>确认密码</label>
+					<input id='passwordTwo' type="password" class="mui-input-clear mui-input" placeholder="请再次输入登录密码">
+				</div>
+			</form>
+			<div class="mui-content-padded">
+				<button id='register' class="mui-btn mui-btn-block mui-btn-primary">确定注册</button>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			document.getElementById('register').addEventListener('tap',function(){
+				var uname=document.getElementById('account').value;
+				var pasOne=document.getElementById('passwordOne').value;
+				var pasTwo=document.getElementById('passwordTwo').value;
+				if(!uname){mui.toast("请输入账号");}
+				else if(!pasOne){mui.toast("请输入新密码");}
+				else if(!pasTwo){mui.toast("请输入确认密码");}
+				else if(pasOne != pasTwo){mui.toast("两次输入密码不一致");}
+				if(!uname || pasOne == pasTwo){
+//						console.log('ssss')
+//					$.ajax({
+//						type:"POST",
+//						url:"",
+//						data:'json',
+//						success:function(data){
+//							if (data.success) {
+//							mui.openWindow({
+//							url:'login.html',
+//							id:'complete'
+//						})
+//							} else{
+//								
+//							}
+//						}
+//					});
+				}
+			});
+		</script>
+	</body>
+</html>	

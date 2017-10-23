@@ -1,0 +1,38 @@
+.detailInfo{padding-top:60px;}
+.detailInfo .info{height: 50%;width: 80%;margin: 0 10%;}
+.infoImg{display: inline-block; width:10rem;}
+.infoImg img{width: 100%;}
+.infoMes{display: inline-block;position: absolute;}
+.infoMes p{font-size: 1.3rem;margin: 10px 0 0 20px;color:#8f8f94;}
+.payText{text-align: center;margin-top: 1.6rem;}
+.payText input{line-height: 22px;}
+.detailInfo .info .infoMes p{margin-bottom: 20px;}
+.detailInfo .info .userMes p{margin-bottom: 40px;padding-bottom:20px ;}
+.infoMes .infoMesName,.infoMes .infoMesLi,.infoMes .infoMesPhone{color: #000000;font-size:1.0rem;}
+.detailInfo .info>p{margin-bottom:10px;font-size: 1.5rem;}
+.upFile{border: none;color: white;overflow: hidden;margin: 1rem;padding: 0;text-transform: uppercase;width:3rem;
+height: 23px;cursor:pointer;}
+.info>img{width: 100%;padding-top: 10px;}
+.detailInfo .info .userMin p{margin-top: 10px;}
+.detailInfo .carImg{margin-top: 40px;}
+.detailInfo .carImg>p{background: #DD524D;text-align: center;border-radius: 1.5rem;color: #EEEEEE;}
+.btn {border: none;color: white;overflow: hidden;margin: 1rem;padding: 0;text-transform: uppercase;width:3rem;
+height: 23px;cursor:pointer;}
+.btn-round {border-radius: 2em;}
+.material-design {position: relative;}
+.material-design canvas {opacity: 0.25;position: absolute;top: 0;left: 0;}
+.btn.color-1 {background-color: #426fc5;}
+@media only screen and (max-width: 297px){
+.infoImg img{width: 80%;}
+.userTitle{height: 30px;}
+.userTitle .headIcon img{width:20px;padding-top:5px;}
+.userTitle .headTitle{width: 40%;margin:0 10%;font-size: 14px;}
+.detailInfo .info>p{font-size: 2.2rem;}
+.detailInfo .carImg>p{width: 60%;margin:0 auto}
+.info .userMes{top:20px;margin-top: 20px;position: static;}
+.detailInfo .carImg{margin-top: 10px;}
+.detailInfo .info{text-align: center;}
+.detailInfo .info .infoMes{top: 30px;position: static;}
+.detailInfo .info .infoMes p{font-size: 1rem;margin:5px 0 0 10px;text-align: left;}
+.btn{width:4rem;height: 30px;}
+}

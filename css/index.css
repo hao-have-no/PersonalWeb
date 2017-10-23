@@ -1,28 +1,21 @@
-.showContent{
-	width: 100%;
-	height: 100%;
-}
-.imgList{
-	
-}
-.showIcon{
-	width: 80%;
-	margin: 0 10%;
-}
+.showContent{width: 100%;height: 100%;}
+.mui-table-view{background: rgba(255,255,255,.6);}
+#offCanvasSide p{color:#555;}
+#offCanvasSide #user-ico{height: 80px;max-width:80px;}
+#offCanvasSide #user-sex{font-size: 16px;line-height: 2em;}
+#offCanvasSide .man-active{color:#2468a2;}
+#offCanvasSide .woman-active{color:#f58f98;}
+#offCanvasSide .mui-scroll{margin-top: 30px;}
+#offCanvasSide .mui-table-view{margin-top: 20px;}
+#tab .mui-table-view-cell{padding: 0;}
+.container{width:100%;height:100%;}
+.showIcon{width: 90%;margin: 20% 5% 0;}
 .showIcon .icon{display: inline-block;font-size:1.6rem;margin-top:2rem;width:32%;}
 .showIcon .icon .iconImg{position: relative; text-align: center;}
 .showIcon .icon .iconImg img{width:50%;height:50%;}
-.showIcon .icon .iconImg .iconNum{
-	position: absolute;
-	left:60%; 
-	width:1.6rem;
-	height:1.6rem;
-	background-color: #FF0000;
-	/*border: 1px solid #FF0000;*/
-	display:inline-block;
-	border-radius:0.8rem;
-	text-align: center;
-	font-size: 1.3rem;
-	color: #FFF;
-	}
+.showIcon .icon .iconImg .iconNum{position: absolute;left:60%; width:1.6rem;height:1.6rem;background-color: #FF0000;
+display:inline-block;border-radius:0.8rem;text-align: center;font-size: 1.3rem;color: #FFF;}
 .showIcon .icon .iconTitle{text-align: center;}
+@media only screen and (max-width: 310px){
+.showIcon .icon{width:60%;margin:2rem 20%;}
+}

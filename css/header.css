@@ -1,0 +1,14 @@
+.Title{position: fixed;z-index: 10;right: 0;left: 0;height: 40px;padding-right: 10px;padding-left: 10px;padding-top: 10px;border-bottom: 0;
+background-color: #f7f7f7;
+-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, .85);
+box-shadow: 0 0 1px rgba(0, 0, 0, .85);}
+.Title .headIcon{display: inline-block;width: 30px;}
+.Title .headIcon img{width: 100%;}
+.Title .headTitle{display: inline-block;overflow: hidden;font-size: 20px;width: 70%;text-align: center;margin: 0 auto;text-overflow: ellipsis;}
+@media only screen and (max-width: 297px){
+.Title{padding-top: 5px;}
+.Title .headTitle{font-size: 15px;}
+}
+@media only screen and (max-width:197px){
+	.Title .headTitle{width: 60%;}
+}

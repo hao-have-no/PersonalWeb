@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">登录</h1>
+		</header>
+		<div class="mui-content">
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label>账号</label>
+					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="登陆账号为手机号">
+				</div>
+				<div class="mui-input-row">
+					<label>密码</label>
+					<input id='password' type="password" class="mui-input-clear mui-input" placeholder="密码6-12位">
+				</div>
+			</form>
+			<div class="mui-content-padded">
+				<button id='login' class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+				<div class="link-area" style="clear: both;">
+					<a id='forgetPassword'style="float: right;">忘记密码</a>
+					<a id='registerPassword'>注册帐号</a>
+				</div>
+			</div>
+		</div>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript">
+					mui.init({
+						keyEventBind: {
+							backbutton: false  //关闭back按键监听
+						}
+					});
+					document.getElementById('forgetPassword').addEventListener('tap', function(){
+						mui.toast('请在联系管理员进行相关操作');
+					});
+					document.getElementById('registerPassword').addEventListener('tap', function(){
+						mui.openWindow({
+							url:'Register.html',
+							id:'register'
+						});
+					});
+					document.getElementById('login').addEventListener('tap', function(){
+						var Laccount=$('#account').val();
+						var Lpassword=$('#password').val();
+						if(!Laccount){mui.toast("请输入账号");}
+						else if(!Lpassword){mui.toast("请输入密码");}
+						else{
+						if(Laccount=='123456'){//对比账号
+							if(Lpassword== '123456'){//对比密码
+			 			 		mui.openWindow({
+//			 			 			var user=window.localStorage;
+				 	 				url: 'index.html?act='+Laccount, 
+				  					id:'index'
+								});
+							}
+							else{mui.toast("密码错误");} //密码不对返回错误
+						}
+						else{mui.toast("账号错误");}//账号不对返回错误
+//						$.ajax({ 
+//							type: "GET", 	
+//							url: "http://172.20.28.217:80/Oldmap/LoginCheck?username=" + Laccount+ "&&password=" + Lpassword,
+//							dataType: "jsonp",
+//							jsonp: "callback",
+//							success: function(data){
+//							if (data.success) {
+//							   localStorage.clear();
+//							   var user=window.localStorage;
+//							   user.userimg=data.img;
+//							   user.userid=Laccount;
+//							   user.username=data.name;
+//							   mui.openWindow({url: 'index.html', id:'index',});
+//							}else {mui.toast('登录失败,请检查用户名/密码');}
+//							},
+//							error: function(jqXHR){mui.toast("网络错误");}
+//						});
+						}
+					});
+				</script>
+	</body>
+
+</html>

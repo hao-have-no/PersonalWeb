@@ -3,28 +3,72 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>用户信息</title>
+		<link rel="stylesheet" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user.css"/>
+		<style type="text/css">
+			input[type="file"]{opacity: 0;width: 8rem;position: absolute;top:0;left:0;}
+			.Upp{position: relative;display: inline-block;text-align: center;
+			color: #fff;width: 8rem;margin:5px 15px;
+			height: 28px;line-height: 28px;background: #ccc;border-radius: 6px;}
+		</style>
 	</head>
 	<body>
-		<header class="userTitle">
-			<a href=""><img src="img/icon/return.png"/></a>
-			<h1>用户信息</h1>
+		<header class="Title">
+			<a href="javascript:;" class="headIcon"><img src="img/icon/return.png"/></a>
+			<p class="headTitle">用户信息</p>
 		</header>
 		<div class="detailInfo">
 			<div class="info">
-				<div class="infoImg userImg"><img src="img/user/eg1.jpg" alt=""/></div>
+				<div class="infoImg userImg">
+					<img id="userImg" src="img/user/timg.png" style="vertical-align:middle;" alt="用户头像"/>
+					<!--<div id="image-holder"><img src="img/user/eg1.jpg" alt="用户头像"/></div>
+					<input id="fileUpload" type="file" /><br />-->
+					<p><a class="Upp">上传文件<input class="up" runat="server" type="file" accept="image/*" capture="camera"/></a></p>
+					<!--<input id="fileUpload" class="upFile" runat="server" type="file" accept="image/*" capture="camera" style="width:100%"/>-->
+				</div>
 				<div class="infoMes userMes">
-					<p><span class="infoMesName">昵称</span><span class="infoMesInfo"></span></p>
-					<p><span class="infoMesName">电话</span><span class="infoMesInfo"></span></p>
+					<p><span class="infoMesName">昵称:</span><span class="infoMesInfo">yiyi</span></p>
+					<p><span class="infoMesPhone">电话:</span><span class="infoMesInfo">13123233434</span></p>
 				</div>
 			</div>
-			<div class="info">
-				<div class="infoImg otherImg"><img src="img/user/car.jpg" alt=""/></div>
-				<div class="infoMes otherMes">
-					<p><span class="otherMesName">用户</span><span class="otherMesInfo"></span></p>
-					<p><span class="otherMesName">电话</span><span class="otherMesInfo"></span></p>
-					<p><span class="otherMesName">地址</span><span class="otherMesInfo"></span></p>
-				</div>
+			<div class="info carImg">
+				<p>车辆信息</p>
+				<img src="img/user/car.jpg" alt="车辆照片"/>
 			</div>
 		</div>
+		<script src="js/public.js"></script>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<!--<script type="text/javascript">
+//			fileUpload:input上传按钮
+//			#image-holder：显示图片的div
+//			$("#fileUpload").on('change', function () {
+//		    if (typeof (FileReader) != "undefined") {
+//		        var image_holder = $("#image-holder");
+//		        image_holder.empty();
+//		        var reader = new FileReader();
+//		        reader.onload = function (e) {
+//		            $("<img />", {
+//		                "src": e.target.result,
+//		                "class": "thumb-image"
+//		            }).appendTo(image_holder);
+//		 
+//		        }
+//		        image_holder.show();
+//		        reader.readAsDataURL($(this)[0].files[0]);
+//		    } else {
+//		        alert("你的浏览器不支持FileReader");
+//		    }
+//		});
+		</script>-->
+		<!--<script type="text/javascript">
+			document.getElementById('userImg').addEventListener('click',function(){
+				document.getElementById('File2').click();
+				var newImgVal=document.getElementById('File2').value;
+				setTimeout(function(){
+					alert(newImgVal);
+				},5000);
+			});
+		</script>-->
 	</body>
 </html>
